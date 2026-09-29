@@ -1,6 +1,11 @@
 import CartaoViagem from "./CartaoViagem";
 
 export default function Catalogo({ viagens, filtrarPorTipo, filtro }) {
+  const numViagens =
+    filtro === "" || filtro === undefined
+      ? viagens.length
+      : viagens.filter((v) => v.tipo === filtro).length;
+
   return (
     <section
       className="catalogo"
@@ -12,7 +17,7 @@ export default function Catalogo({ viagens, filtrarPorTipo, filtro }) {
           <p className="sobre-titulo">ESCOLHE O TEU RITMO</p>
           <h2 id="titulo-destinos">Destinos para descobrir</h2>
         </div>
-        <p className="contagem">{viagens.length} viagens</p>
+        <p className="contagem">{numViagens} viagens</p>
       </div>
       <div
         className="barra-filtros"
