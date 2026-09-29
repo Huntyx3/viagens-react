@@ -14,7 +14,7 @@ function App() {
   for (let i = 0; i < viagens.length; i++) {
     Object.assign(viagens[i], { imagem: imgs[i] });
   }
-  const [filtro, setFiltro] = useState("");
+  const [filtro, setFiltro] = useState(undefined);
 
   function filtrarPorTipo(tipo) {
     setFiltro((prev) => {

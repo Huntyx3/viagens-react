@@ -2,7 +2,7 @@ import CartaoViagem from "./CartaoViagem";
 
 export default function Catalogo({ viagens, filtrarPorTipo, filtro }) {
   const numViagens =
-    filtro === "" || filtro === undefined
+    filtro === undefined
       ? viagens.length
       : viagens.filter((v) => v.tipo === filtro).length;
 
@@ -25,15 +25,9 @@ export default function Catalogo({ viagens, filtrarPorTipo, filtro }) {
         aria-label="Filtrar viagens por tipo"
       >
         <button
-          className={
-            filtro === undefined || filtro === ""
-              ? "filtro filtro--ativo"
-              : "filtro"
-          }
+          className={filtro === undefined ? "filtro filtro--ativo" : "filtro"}
           type="button"
-          aria-pressed={
-            filtro === undefined || filtro === "" ? "true" : "false"
-          }
+          aria-pressed={filtro === undefined ? "true" : "false"}
           onClick={() => filtrarPorTipo()}
         >
           Todas
