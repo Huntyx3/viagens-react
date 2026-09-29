@@ -10,7 +10,7 @@ import { viagens } from "./viagens";
 import Footer from "./Footer";
 
 function App() {
-  const imgs = [costaVicentina, portoDouro, serraEstrela];
+  const imgs = [portoDouro, serraEstrela, costaVicentina];
   for (let i = 0; i < viagens.length; i++) {
     Object.assign(viagens[i], { imagem: imgs[i] });
   }
@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="pagina" id="inicio">
       <Header />
-      <Hero img={imgs[0]} />
+      <Hero img={imgs[2]} />
       <main>
         <Catalogo
           imgs={imgs}
