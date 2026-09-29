@@ -1,0 +1,27 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #183439;
+  background: #f8f9f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+html { scroll-behavior: smooth; }
+
+:focus-visible {
+  outline: 3px solid #e6a46e;
+  outline-offset: 3px;
+}
